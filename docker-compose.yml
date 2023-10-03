@@ -1,0 +1,6 @@
+services:
+  app:
+    build: .
+    command: /usr/local/openresty/bin/openresty -g 'daemon off;'
+    ports:
+      - 3000:3000
