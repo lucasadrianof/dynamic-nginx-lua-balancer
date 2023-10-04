@@ -1,0 +1,9 @@
+services:
+  app:
+    env_file:
+      - .env
+    volumes:
+      - ./conf:/etc/nginx/conf.d/
+      - ./docker-entrypoint.sh:/usr/local/bin/docker-entrypoint.sh
+      - ./lua-scripts:/etc/nginx/lua-scripts/
+      - ./nginx.conf.template:/usr/local/openresty/nginx/conf/nginx.conf.template
